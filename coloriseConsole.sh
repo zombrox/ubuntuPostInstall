@@ -160,6 +160,8 @@ sed -i "s/WD_COLOR/${wdColor}/" bashrc.root
 sed -i "s/DOLLAR_COLOR/${dollarColor}/" bashrc.common
 sed -i "s/SHARP_COLOR/${sharpColor}/" bashrc.root
 
+rm -f /root/.bashrc
+rm -f /home/*/.bashrc
 
 cp bashrc.common /etc/bash.bashrc
 chown root:root /etc/bash.bashrc
