@@ -12,7 +12,6 @@ echo -e "# Simple Colours"
 
 while [ $color -le 36 ]
 
-
 do
 echo -e "[\e["$userColor"muser\e[0m\e[1;"$atColor"m@\e[0m\e["$hostColor"mhost\e[0m \e[1;"$wdColor"m/work/dir/\e[0m]\e["$dollarColor"m$\e[0m"
 echo -en "[\e["$rootColor"mroot\e[0m\e[1;"$atColor"m@\e[0m\e["$hostColor"mhost\e[0m \e[1;"$wdColor"m/work/dir/\e[0m]\e["$sharpColor"m#\e[0m"
@@ -20,7 +19,6 @@ echo -en "[\e["$rootColor"mroot\e[0m\e[1;"$atColor"m@\e[0m\e["$hostColor"mhost\e
 let "counter = $color-30"
 
 echo " color set - $counter"
-
 
 let "color += 1"
 let atColor=color
@@ -37,14 +35,12 @@ echo -en "[\e["$rootColor"mroot\e[0m\e[1;"$atColor"m@\e[0m\e["$hostColor"mhost\e
 let "counter += 1"
 echo " color set - $counter"
 
-
 atColor="38;5;128"
 hostColor="38;5;91"
 echo -e "[\e["$userColor"muser\e[0m\e[1;"$atColor"m@\e[0m\e["$hostColor"mhost\e[0m \e[1;"$wdColor"m/work/dir/\e[0m]\e["$dollarColor"m$\e[0m"
 echo -en "[\e["$rootColor"mroot\e[0m\e[1;"$atColor"m@\e[0m\e["$hostColor"mhost\e[0m \e[1;"$wdColor"m/work/dir/\e[0m]\e["$sharpColor"m#\e[0m"
 let "counter += 1"
 echo " color set - $counter"
-
 
 atColor="38;5;134"
 hostColor="38;5;97"
