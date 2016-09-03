@@ -3,7 +3,6 @@
 adminName=$1
 # You need to be SUDO using "sudo -i" not "sudo -s".
 
-groupadd $adminName
 useradd $adminName -U -m -G adm,cdrom,sudo,dip,plugdev,lxd,lpadmin,sambashare
 
 mkdir /home/$adminName/.ssh
