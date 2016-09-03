@@ -7,22 +7,21 @@ while read line; do
 	./addAdminUser.sh $line &
 done < $FILE
 
-# 2. Disableing SELINUX
+# 2. Disableing aparmor
 
-# 3. adding EPEL repository
+# 3. adding repository if needed
 
 # 4. Updating system
 apt-get update && apt-get upgrade -y
 
 # 5. Installing usefull utilites and services
+apt-get install nload htop
 
 # 6. Starting and enableing installed services
 
 # 7. disableing Firewalld
 
 # 8. config for proper ssh daemon work
-
-
 
 # 9. Changing password for admin users 
 while read line; do
