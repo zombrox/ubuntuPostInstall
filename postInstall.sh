@@ -15,7 +15,7 @@ done < $FILE
 apt-get update && apt-get upgrade -y
 
 # 5. Installing usefull utilites and services
-apt-get install nload htop
+apt-get install -y nload htop
 
 # 6. Starting and enableing installed services
 
