@@ -3,8 +3,8 @@
 # 1. Adding admin Users
 FILE=admins.txt
 while read line; do
-	echo "This is admin : $line"
-	addAdminUser.sh $line
+	echo "Adding admin user : $line"
+	./addAdminUser.sh $line &
 done < $FILE
 
 # 2. Disableing SELINUX
@@ -26,11 +26,13 @@ apt-get update && apt-get upgrade -y
 
 # 9. Changing password for admin users 
 while read line; do
-	echo "This is admin : $line"
-	changeAdminUserPass.sh $line
+	echo "  Changing password for admin user: $line"
+	./changeAdminUserPass.sh $line &
 done < $FILE
 
 # 10. Colorise console
 
-coloriseConsole.sh
+./coloriseConsole.sh &&
+
+exit 0
 

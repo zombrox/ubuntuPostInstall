@@ -70,8 +70,7 @@ echo -en "[\e["$rootColor"mroot\e[0m\e[1;"$atColor"m@\e[0m\e["$hostColor"mhost\e
 let "counter += 1"
 echo " color set - $counter"
 
-echo -n "  choose color set: "
-read choose
+echo -en '  choose color set: ' && read choose
 
 
 case $choose in
@@ -137,8 +136,6 @@ atColor="38;5;74"
 hostColor="38;5;67"
 
           ;;
-
-
 esac
 
 echo -e "  Selected color set:"
