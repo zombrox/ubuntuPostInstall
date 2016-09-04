@@ -9,8 +9,6 @@ while read line; do
 	echo "Adding admin user : $line"
 	./addAdminUser.sh $line &
 done < $FILE
-rm admins.txt.temp
-
 
 # 2. Disableing aparmor
 
@@ -33,6 +31,8 @@ while read line; do
 	echo "  Changing password for admin user: $line"
 	./changeAdminUserPass.sh $line &
 done < $FILE
+
+rm admins.txt.temp
 
 # 10. Colorise console
 
