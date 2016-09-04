@@ -1,11 +1,16 @@
 #!/bin/bash
 
 # 1. Adding admin Users
-FILE=admins.txt
+
+cat admins.txt | sed -e '/^#/ d' > admins.txt.temp
+
+FILE=admins.txt.temp
 while read line; do
 	echo "Adding admin user : $line"
 	./addAdminUser.sh $line &
 done < $FILE
+rm admins.txt.temp
+
 
 # 2. Disableing aparmor
 
